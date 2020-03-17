@@ -1,8 +1,12 @@
 version: '3'
+maintener: David Wahyu (me@dwp.my.id)
 services:
   db:
-    image: postgres:9.6
+    image: postgres:10
+    ports:
+      - "5432:5432"
     environment:
+      - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD={pass}
       - POSTGRES_USER={user}
 
@@ -12,11 +16,7 @@ services:
       - db
     ports:
       - "8088:8069"
-    tty: true
-    command: -- --dev=reload
     volumes:
-      - ./my-addons/:/mnt/extra-addons
-      - .
-volumes:
-  db:
-  odoo12:
+      - ./my-addons:/mnt/extra-addons/
+      - ./config:/etc/odoo/
+      
