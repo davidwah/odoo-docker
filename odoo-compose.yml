@@ -1,5 +1,4 @@
 version: '3'
-maintener: David Wahyu (me@dwp.my.id)
 services:
   db:
     image: postgres:10
