@@ -7,7 +7,7 @@ services:
         ports:
             - "8069:8069"
         volumes:
-            - ./addons:/mnt/extra-addons/
+            - ./my-addons:/mnt/extra-addons/
             - ./config:/etc/odoo/
 
     db:
