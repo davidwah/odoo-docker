@@ -1,4 +1,5 @@
 version: '2'
+maintener: [David Wahyu]
 services:
     odoo12:
         image: odoo:12.0
